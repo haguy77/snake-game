@@ -7,9 +7,9 @@ from snake import Snake
 class Game:
     def __init__(self):
         pygame.init()
-        self.surface = pygame.display.set_mode((500, 500))
+        self.surface = pygame.display.set_mode((1000, 600))
         self.surface.fill((110, 110, 5))
-        self.snake = Snake(self.surface)
+        self.snake = Snake(self.surface, 2)
         self.snake.draw()
 
     def run(self):

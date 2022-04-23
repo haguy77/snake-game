@@ -1,16 +1,21 @@
 import pygame
 
 
+SIZE = 40
+
+
 class Snake:
-    def __init__(self, parent_screen: pygame.Surface):
+    def __init__(self, parent_screen: pygame.Surface, length):
         """
         Initiates Snake object
         :param parent_screen: pygame.Surface object of parent screen
+        :param length: initial length of snake
         """
+        self.length = length
         self.parent_screen = parent_screen
         self.block = pygame.image.load("resources/block.jpg").convert()
-        self.x = 100
-        self.y = 100
+        self.x = [SIZE] * length
+        self.y = [SIZE] * length
         self.direction = "down"
 
     def move_left(self):
@@ -27,17 +32,23 @@ class Snake:
 
     def draw(self):
         self.parent_screen.fill((110, 110, 5))
-        self.parent_screen.blit(self.block, (self.x, self.y))
+        for i in range(self.length):
+            self.parent_screen.blit(self.block, (self.x[i], self.y[i]))
         pygame.display.flip()
 
     def walk(self):
+
+        for i in range(self.length-1, 0, -1):
+            self.x[i] = self.x[i - 1]
+            self.y[i] = self.y[i - 1]
+
         if self.direction == "up":
-            self.y = self.y - 10
+            self.y[0] = self.y[0] - SIZE
         if self.direction == "down":
-            self.y = self.y + 10
+            self.y[0] = self.y[0] + SIZE
         if self.direction == "left":
-            self.x = self.x - 10
+            self.x[0] = self.x[0] - SIZE
         if self.direction == "right":
-            self.x = self.x + 10
+            self.x[0] = self.x[0] + SIZE
 
         self.draw()
