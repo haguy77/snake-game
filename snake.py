@@ -3,6 +3,23 @@ from cons import SIZE
 
 
 class Snake:
+    """
+        A class to represent the snake in the snake game
+
+        ...
+
+        Attributes
+        ----------
+        # TODO documentation of class Snake attributes, example below
+        name : str
+            first name of the person
+
+        Methods
+        -------
+        # TODO ducomentation of class Snake methods, example below
+        info(additional=""):
+            Prints the person's name and age.
+        """
     def __init__(self, parent_screen: pygame.Surface, length):
         """
         Initiates Snake object

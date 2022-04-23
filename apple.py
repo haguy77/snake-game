@@ -2,6 +2,23 @@ import pygame
 from cons import SIZE
 
 class Apple:
+    """
+        A class to represent the apple in the snake game
+
+        ...
+
+        Attributes
+        ----------
+        # TODO documentation of class Apple attributes, example below
+        name : str
+            first name of the person
+
+        Methods
+        -------
+        # TODO ducomentation of class Apple methods, example below
+        info(additional=""):
+            Prints the person's name and age.
+        """
     def __init__(self, parent_screen: pygame.Surface):
         """
         Initiates Apple object

@@ -6,6 +6,23 @@ from apple import Apple
 
 
 class Game:
+    """
+    A class to represent the snake game
+
+    ...
+
+    Attributes
+    ----------
+    # TODO documentation of class Game attributes, example below
+    name : str
+        first name of the person
+
+    Methods
+    -------
+    # TODO ducomentation of class Game methods, example below
+    info(additional=""):
+        Prints the person's name and age.
+    """
     def __init__(self):
         pygame.init()
         self.surface = pygame.display.set_mode((1000, 600))
