@@ -1,7 +1,5 @@
 import pygame
-
-
-SIZE = 40
+from cons import SIZE
 
 
 class Snake:
