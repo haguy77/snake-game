@@ -7,6 +7,7 @@ class Game:
     def __init__(self):
         pygame.init()
         self.surface = pygame.display.set_mode((500, 500))
+        print(type(self.surface))
         self.surface.fill((110, 110, 5))
         self.snake = Snake(self.surface)
         self.snake.draw()

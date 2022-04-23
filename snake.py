@@ -2,7 +2,11 @@ import pygame
 
 
 class Snake:
-    def __init__(self, parent_screen):
+    def __init__(self, parent_screen: pygame.Surface):
+        """
+        Initiates Snake object
+        :param parent_screen: pygame.Surface object of parent screen
+        """
         self.parent_screen = parent_screen
         self.block = pygame.image.load("resources/block.jpg").convert()
         self.x = 100
