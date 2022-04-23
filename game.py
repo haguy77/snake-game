@@ -131,3 +131,7 @@ class Game:
                 pause = True
                 self.reset()
             time.sleep(0.2)
+
+# TODO Add out of screen feature to come back from different side
+# TODO Add increase speed feature when snake getting bigger
+# TODO Export game to .EXE file
