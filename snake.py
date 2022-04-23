@@ -1,5 +1,5 @@
 import pygame
-from cons import SIZE
+from cons import SIZE, BACKGROUND_COLOR
 
 
 class Snake:
@@ -51,7 +51,7 @@ class Snake:
         self.direction = "down"
 
     def draw(self):
-        self.parent_screen.fill((110, 110, 5))
+        self.parent_screen.fill(BACKGROUND_COLOR)
         for i in range(self.length):
             self.parent_screen.blit(self.block, (self.x[i], self.y[i]))
         pygame.display.flip()
