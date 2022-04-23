@@ -1,5 +1,7 @@
 import pygame
-from cons import SIZE
+import random
+from cons import SIZE, X_STEP_INCREMENT, Y_STEP_INCREMENT
+
 
 class Apple:
     """
@@ -10,12 +12,12 @@ class Apple:
         Attributes
         ----------
         # TODO documentation of class Apple attributes, example below
-        name : str
+        parent_screen : str
             first name of the person
 
         Methods
         -------
-        # TODO ducomentation of class Apple methods, example below
+        # TODO documentation of class Apple methods, example below
         info(additional=""):
             Prints the person's name and age.
         """
@@ -32,3 +34,7 @@ class Apple:
     def draw(self):
         self.parent_screen.blit(self.image, (self.x, self.y))
         pygame.display.flip()
+
+    def move(self):
+        self.x = random.randint(0, X_STEP_INCREMENT - 1) * SIZE
+        self.y = random.randint(0, Y_STEP_INCREMENT - 1) * SIZE

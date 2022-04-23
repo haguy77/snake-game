@@ -11,12 +11,12 @@ class Snake:
         Attributes
         ----------
         # TODO documentation of class Snake attributes, example below
-        name : str
+        length : str
             first name of the person
 
         Methods
         -------
-        # TODO ducomentation of class Snake methods, example below
+        # TODO documentation of class Snake methods, example below
         info(additional=""):
             Prints the person's name and age.
         """
@@ -32,6 +32,11 @@ class Snake:
         self.x = [SIZE] * length
         self.y = [SIZE] * length
         self.direction = "down"
+
+    def increase_length(self):
+        self.length = self.length + 1
+        self.x.append(-1)
+        self.y.append(-1)
 
     def move_left(self):
         self.direction = "left"
