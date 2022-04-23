@@ -51,7 +51,6 @@ class Snake:
         self.direction = "down"
 
     def draw(self):
-        self.parent_screen.fill(BACKGROUND_COLOR)
         for i in range(self.length):
             self.parent_screen.blit(self.block, (self.x[i], self.y[i]))
         pygame.display.flip()
